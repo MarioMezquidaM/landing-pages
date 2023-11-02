@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+/* font-family: 'Bebas Neue', sans-serif;  */
+
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    background: linear-gradient(
+        150deg,
+        #0441d9 0%, 
+        #0000f0 16%, 
+        #0a3aaf 33%, 
+        #0a3aaf 51%, 
+        #0010b0 65%, 
+        #0010b0 100%
+    );
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+header {
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.logo {
+    color: #ffffff;
+    font-size: 25px;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul li {
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+.navbar ul li a {
+    color: #FFFFFF;
+}
+
+.navbar ul li a:hover {
+    color: #0000d2;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.header-content {
+    display: flex;
+    margin-top: 150px;
+}
+
+.header-txt {
+    flex-basis: 50%;
+    padding-right: 120px;
+}
+
+.header-txt h1 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size:  100px;
+    line-height: 1;
+    color: #FFFFFF;
+    margin-bottom: 15px;
+}
+
+.header-txt p {
+    font-size: 20px;
+    color: #c1c1c1;
+    margin-bottom: 50px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 13px 30px;
+    background: linear-gradient(
+        90deg,
+        rgb(219, 215, 215) 0%,
+        rgb(255, 255, 255) 100%
+    );
+    color: #0617ff;
+    font-size: 18px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #01018a33
+}
+
+.header-img {
+    flex-basis:  50%;
+}
+
+@media(max-width:991px) {
+
+    .menu {
+        position: relative;
+        padding: 20px;
+    }
+
+    .menu label {
+        display: initial;
+    }
+
+    .menu .navbar {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #1360ee;
+        display: none;
+        border-radius: 5px;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+        padding: 0 20px;
+    }
+
+    .menu .navbar ul li {
+        width: 100%;
+        padding: 20px 0;
+    }
+
+    .menu .navbar ul li a:hover {
+        color: #1F0C42
+    }
+
+    #menu:checked ~ .navbar {
+        display: initial;
+    }
+
+    .header-content {
+        padding: 30px;
+        margin-top: 0;
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .header-txt {
+        padding: 0 0 40px 0;
+    }
+
+    .header-img img {
+        width: 300px;
+    }
+
+}
